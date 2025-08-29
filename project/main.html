@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کافه خوش آمدید</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Vazir', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 40px;
+      font-size: 32px;
+      position: relative;
+    }
+
+    h1::after {
+      content: "\2615";
+      position: absolute;
+      left: -40px;
+      top: 0;
+      font-size: 32px;
+      animation: swing 2s infinite;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #1abc9c, #6dd5ed, #2193b0);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-size: 300% 300%;
+      animation: gradientMove 6s ease infinite;
+    }
+
+    .btn:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes swing {
+      0%, 100% { transform: rotate(0); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>به  مدیریت کافه خوش آمدید!</h1>
+
+    <div class="row">
+      <button class="btn" onclick="location.href='person.php'">ثبت شخص</button>
+    </div>
+
+    <div class="row">
+      <button class="btn" onclick="location.href='employe.php'">ثبت کارمند</button>
+      <button class="btn" onclick="location.href='customer.php'">ثبت مشتری</button>
+    </div>
+
+    <div class="row">
+      <button class="btn" onclick="location.href='product.php'">ثبت محصول</button>
+      <button class="btn" onclick="location.href='order.php'">ثبت سفارش</button>
+    </div>
+
+  </div>
+</body>
+</html>
